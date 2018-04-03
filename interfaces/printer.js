@@ -8,8 +8,9 @@ function PrinterIface(printerName, moduleName) {
   if (moduleName && typeof moduleName === 'object') {
     this.driver = moduleName;
   } else {
-    this.driver = require(moduleName ||
-      (electron ? 'electron-printer' : 'printer'));
+    this.driver = module.require(
+      moduleName || (electron ? 'electron-printer' : 'printer')
+    );
   }
 }
 
