@@ -2,7 +2,7 @@ var parseNet = /^tcp:\/\/([^\/:]+)(?::(\d+))?\/?$/i;
 var parsePrinter = /^printer:([^\/]+)(?:\/([\w-]*))?$/i;
 
 function getInterface(uri) {
-  if (typeof uri === "object") {
+  if (typeof uri === 'object') {
     return uri;
   }
 
